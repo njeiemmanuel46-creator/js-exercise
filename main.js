@@ -1,18 +1,22 @@
-function multiply(a, b) {
-    let result = 0;
+function isLeapYear(year) {
 
-    for (let i = 0; i < b; i++) {
-        result = result + a;
+    if (year % 4 === 0 && year % 100 !== 0) {
+        return true;
     }
 
-    return result;
+    if (year % 400 === 0) {
+        return true;
+    }
+
+    return false;
 }
 
-function multiplyNumbers() {
-    let a = document.getElementById("num1").value;
-    let b = document.getElementById("num2").value;
+function checkLeapYear() {
+    let year = document.getElementById("year").value;
 
-    let result = multiply(a, b);
-
-    document.getElementById("result").innerText = result;
+    if (isLeapYear(year)) {
+        document.getElementById("result").innerText = "Leap Year";
+    } else {
+        document.getElementById("result").innerText = "Not Leap Year";
+    }
 }
