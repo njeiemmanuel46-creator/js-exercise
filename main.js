@@ -1,7 +1,18 @@
-function changeColor() {
+function findMax(a, b, c) {
+    let max = a;
 
-    let randomColor =
-    "#" + Math.floor(Math.random()*16777215).toString(16);
+    if (b > max) {
+        max = b;
+    }
 
-    document.body.style.backgroundColor = randomColor;
+    if (c > max) {
+        max = c;
+    }
+
+    return max;
+}
+
+function showMax() {
+    let result = findMax(5, 8, 3);
+    document.getElementById("result").innerText = "Max: " + result;
 }
