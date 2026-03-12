@@ -1,18 +1,16 @@
-function findMax(a, b, c) {
-    let max = a;
+function factorial(n) {
+    let result = 1;
 
-    if (b > max) {
-        max = b;
+    for (let i = 1; i <= n; i++) {
+        result = result * i;
     }
 
-    if (c > max) {
-        max = c;
-    }
-
-    return max;
+    return result;
 }
 
-function showMax() {
-    let result = findMax(5, 8, 3);
-    document.getElementById("result").innerText = "Max: " + result;
+function calculateFactorial() {
+    let num = document.getElementById("num").value;
+    let answer = factorial(num);
+
+    document.getElementById("result").innerText = answer;
 }
