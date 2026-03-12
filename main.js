@@ -1,16 +1,18 @@
-function factorial(n) {
-    let result = 1;
+function multiply(a, b) {
+    let result = 0;
 
-    for (let i = 1; i <= n; i++) {
-        result = result * i;
+    for (let i = 0; i < b; i++) {
+        result = result + a;
     }
 
     return result;
 }
 
-function calculateFactorial() {
-    let num = document.getElementById("num").value;
-    let answer = factorial(num);
+function multiplyNumbers() {
+    let a = document.getElementById("num1").value;
+    let b = document.getElementById("num2").value;
 
-    document.getElementById("result").innerText = answer;
+    let result = multiply(a, b);
+
+    document.getElementById("result").innerText = result;
 }
